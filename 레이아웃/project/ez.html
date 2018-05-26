@@ -1,5 +1,6 @@
 <html>
 <head><title>title</title>
+<meta charset="UTF-8" />
 <style type="text/css">
 html, body {height:100%; margin:0; padding:0;}
 .box{width:100%;border:0;height:830px;}
@@ -46,8 +47,70 @@ html {
   </div>
 </div>
 <!--2번째 슬라이드-->
-<div class=box2 style="background-color:#202020;padding:6%;line-height:26px">
-  <b>배경</b><br>
+<div class=box2 style="background-color:#202020;line-height:26px">
+  <br>&nbsp;</br><br>&nbsp;</br>
+  <span style="margin:auto;text-align:center;">
+    <div class=exp >
+      <b>‘TeamplEZ’는 팀 프로젝트의 ‘카카오 톡’입니다.<p>&nbsp;</p></b>
+    </div>
+
+  </span>
+  <!--이미지 슬라이드-->
+  <div class="w3-content" style="max-width:800px;position:relative;margin:auto;">
+    <img class="mySlides" src="../image/EZ/0001.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0002.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0003.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0004.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0006.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0007.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0008.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0009.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0010.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0011.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0012.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0013.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0014.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0015.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0016.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0017.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0018.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0019.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0020.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0021.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0022.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0023.jpg" style="width:100%">
+    <img class="mySlides" src="../image/EZ/0024.jpg" style="width:100%">
+
+
+
+
+    <a class="w3-btn-floating" style="position:absolute;top:50%;left:-7%" onclick="plusDivs(-1)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#F2F2F2" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"/></g></svg></a>
+    <a class="w3-btn-floating" style="position:absolute;top:50%;right:-7%" onclick="plusDivs(1)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#F2F2F2" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"/></g></svg></a>
+
+  </div>
+
+  <script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+  }
+  </script>
+<!--프로젝트 내용-->
+<div style="padding:3%;">
+  <b>TeampleEZ의 배경</b><br>
   <div class=exp>
     대학생들을 상대로 설문을 진행한 결과,팀풀 중 불만을 느꼈던 45%학생들이<br>
     그 이유를 조원들이 제대로 참여하지 않아서라는 답변이 가장 많았다.<br>
@@ -55,27 +118,39 @@ html {
     팀원을 구성하는데 팀원의 능력이나 관심분야가 맞는지 확인할 방법이 없는 등 문제가 다수 존재했다.
   </div>
   <p>&nbsp;</p><p>&nbsp;</p>
-  <img src="../image/purpose.jpg" style="width:87%;margin:auto;"></p>
-  <p>&nbsp;</p><p>&nbsp;</p>
-  <b>스케쥴 관리</b><br>
+  <b>TeampleEZ의 미션</b><br>
   <div class=exp>
-    설문지를 바탕으로 앱에 타임라인 및 스케쥴 관리 기능을 넣었다.<br>
-    팀원이 할당된 과제를 올리거나 투표를 진행하면 타임라인에서 시간순으로 볼 수 있다.<br>
-    또한 타임라인에 등록된 스케쥴은 달력에 자동 업데이트 되며 알람이 생성된다.<br>
+    <ul>
+      <li>세상 모든 팀 프로젝트의 원활한 협업을 가능하게
+    </ul>
   </div>
   <p>&nbsp;</p><p>&nbsp;</p>
-  <img src="../image/schedule.jpg" style="width:87%;margin:auto;"></p>
-  <p>&nbsp;</p><p>&nbsp;</p>
-  <b>그룹 관리</b><br>
+  <b>TeampleEZ의 비전</b><br>
   <div class=exp>
-    학기당 팀플은 여러개 존재하기 때문에 그룹을 생성하여 이를 효과적으로 관리한다.<br>
-    조원을 초대할 수 있으며 등록된 그룹 안에서는 타임라인 및 평가 기능을 이용할 수 있다.<br>
+    <ul>
+      <li>그룹에서의 스트레스를 감소하고 원활한 소통의 창을 마련하여 효율적인 그룹 프로젝트 관리를 가능하게 한다.
+    </ul>
   </div>
   <p>&nbsp;</p><p>&nbsp;</p>
-  <img src="../image/group.jpg" style="width:87%;margin:auto;"></p>
+  <b>TeampleEZ의 전략</b><br>
+  <div class=exp>
+    <ul>
+      <li>TeamplEZ 하나만으로 팀플을 원활하게 진행할 수 있도록 탄탄한 팀플관리기능 구현
+      <li>팀원 모두의 역량을 최대한 높일 수 있는 긍정적 압박 요소 제공
+      <li>최종적으로 교수님이 학생들에게 먼저 추천할 수 있게 서비스 품질 강화
+    </ul>
+  </div>
   <p>&nbsp;</p><p>&nbsp;</p>
-
+  <b>TeampleEZ의 메인 색상</b><br>
+  <div class=exp>
+    <ul>
+      <li>신뢰감을 주며, 마음을 차분하게 하고 스트레스를 줄여주는 데 도움이 되는 파란색과 창조성을 촉진시키며 정신과 신경을 안정시켜주는 보라색을 혼합한 색상인 #a5a7ed 색상을 채택
+      <li>팀 프로젝트의 스트레스를 감소시키고, 팀원들과의 신뢰감을 형성시켜 원활한 팀 프로젝트를 수행할 수 있게 하려고 위의 색상 채택
+    </ul>
+  </div>
+  <p>&nbsp;</p><p>&nbsp;</p>
 </div>
+<video src="../video/intro_EZ.mp4" type="video/mp4" controls="controls" style="margin-left:25%;width:50%;margin-bottom:5%"></video>
 
 </body>
 </html>

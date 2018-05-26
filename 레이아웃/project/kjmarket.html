@@ -1,11 +1,13 @@
 <html>
 <head><title>title</title>
+<meta charset="UTF-8" />
 <style type="text/css">
 html, body {height:100%; margin:0; padding:0;}
 .box{width:100%;border:0;height:830px;}
 .box2{width:100%;border:0;}
 b{color:white;}
 .exp{color:#a5a5a5}
+a{color:white;}
 div{font-family: 'jejugothic',sans-serif;}
 /*글꼴*/
 @font-face {
@@ -46,38 +48,158 @@ html {
     </div>
   </div>
 </div>
-<!--2번째 슬라이드-->
-<div class=box2 style="background-color:#202020;padding:6%;line-height:26px">
+<!--이미지 슬라이드-->
+<div class=box2 style="background-color:#202020;line-height:26px">
+  <br>&nbsp;</br><br>&nbsp;</br>
+  <span style="margin:auto;text-align:center;">
+    <div class=exp >
+      <b>'전통시장 살리기'를 주제로 개선할 시장을 선택하였습니다.<br>
+      또한 해당 시장의 특징을 파악하여 알맞은 솔루션을 제시했습니다.<p>&nbsp;</p></b>
+    </div>
+
+  </span>
+  <div class="w3-content" style="max-width:800px;position:relative;margin:auto;">
+    <img class="mySlides" src="../image/0001.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0002.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0003.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0004.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0006.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0007.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0008.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0009.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0010.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0011.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0012.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0013.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0014.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0015.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0016.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0017.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0018.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0019.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0020.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0021.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0022.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0023.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0024.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0025.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0026.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0027.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0028.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0029.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0030.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0030.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0031.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0032.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0033.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0034.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0035.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0036.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0037.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0038.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0039.jpg" style="width:100%">
+    <img class="mySlides" src="../image/0040.jpg" style="width:100%">
+
+
+
+    <a class="w3-btn-floating" style="position:absolute;top:50%;left:-7%" onclick="plusDivs(-1)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#F2F2F2" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"/></g></svg></a>
+    <a class="w3-btn-floating" style="position:absolute;top:50%;right:-7%" onclick="plusDivs(1)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#F2F2F2" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"/></g></svg></a>
+
+  </div>
+
+  <script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+  }
+  </script>
+
+  <!--2번째 슬라이드-->
+  <div style="padding:3%;">
   <b>팀</b><br>
   <div class=exp>
     팀으로 해당 프로젝트를 진행하였다.<br>
-    팀의 이름은 '비트윈'이며 팀 로고도 제작하여 활동하였다.
+    팀의 이름은 '비트윈'이며 팀 로고도 직접 제작하여 활동하였다.
   </div>
-  <p>&nbsp;</p><p>&nbsp;</p>
-  <img src="../image/0004.jpg" style="width:87%;margin:auto;"></p>
-  <p>&nbsp;</p><p>&nbsp;</p>
-  <b>PEST 분석</b><br>
-  <div class=exp>
-    광장시장을 PEST 분석을 통해 문제점을 해결하고자 하였다
-  </div>
-  <p>&nbsp;</p><p>&nbsp;</p>
-  <img src="../image/0012.jpg" style="width:87%;margin:auto;"></p>
   <p>&nbsp;</p><p>&nbsp;</p>
   <b>해결책</b><br>
   <div class=exp>
-    필드리서치와 새롭게 변화를 준 전통시장을 분석하며 광장시장만의 솔루션을 찾았다.
+    여러번의 필드리서치 인터뷰를 진행하고<br>새롭게 변화를 준 전통시장을 분석하며 광장시장만의 솔루션을 찾았다.
   </div>
   <p>&nbsp;</p><p>&nbsp;</p>
-  <img src="../image/0017.jpg" style="width:87%;margin:auto;"></p>
+  <img src="../image/kj1.jpg">
   <p>&nbsp;</p><p>&nbsp;</p>
   <b>광장시장 앱</b><br>
   <div class=exp>
     광장시장의 솔루션을 광장시장 앱에 담았다.<br>
-    해당 앱에는 지도, 큐알코드 인식, 광장시장 소개 등의 기능을 넣었다.
+    해당 앱에는 지도, 큐알코드 인식, 광장시장 소개 등의 기능을 넣었다.<p>
+    <a href="https://ovenapp.io/view/k5U8zsUiqwYOaMdjhaPno5XF8OBzzAfG/xlySG" target="_blank">카카오 오븐으로 보기</a></p>
   </div>
   <p>&nbsp;</p><p>&nbsp;</p>
-  <img src="../image/0032.jpg" style="width:87%;margin:auto;"></p>
-  <p>&nbsp;</p><p>&nbsp;</p>
+  <div class="w3-content" style="max-width:350px;position:relative;margin:auto;">
+    <img class="kj" src="../image/kj/kj-1.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-2.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-3.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-4.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-5.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-6.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-7.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-8.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-9.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-10.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-11.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-12.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-13.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-14.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-15.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-16.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-17.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-18.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-19.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-20.png" style="width:100%">
+    <img class="kj" src="../image/kj/kj-21.png" style="width:100%">
+
+
+    <a class="w3-btn-floating" style="position:absolute;top:50%;left:-10%" onclick="plusDivs(-1)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#F2F2F2" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"/></g></svg></a>
+    <a class="w3-btn-floating" style="position:absolute;top:50%;right:-10%" onclick="plusDivs(1)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#F2F2F2" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"/></g></svg></a>
+
+  </div>
+
+  <script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("kj");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+  }
+  </script>
+
 </div>
+
+
 </body>
 </html>

@@ -1,6 +1,38 @@
 <html>
-<head><title>frame1</title></head>
-<body style="background-color:white;">
-<div style="text-align:right;margin-right:3%;font-size:10px;">&copy;Hwangsoyeon</div>
+<head>
+  <title>frame1</title>
+  <script language="JavaScript">
+<!--
+function startWatch()
+{
+today = new Date()
+day = today.getDate()
+year = today.getFullYear()
+month = today.getMonth()+1
+si = today.getHours()
+bun = today.getMinutes()
+cho = today.getSeconds()
+clock = year + "." + month + "." + day + "  " + si + ":" + bun + ":" + cho
+frm1.clock.value = clock
+window.defaultStatus = clock
+window.document.title = clock
+// startWatch() 함수를 1초 단위로 재호출한다.
+setTimeout("startWatch()", 1000)
+}
+//-->
+</script>
+</HEAD>
+</head>
+<BODY onLoad="startWatch()" style="margin-top:5px;margin-right:3%;" scroll="no">
+<p align=center>
+<span style="font-size:12px;float:right;">&copy;Hwangsoyeon</span>
+<form name="frm1">
+<input type="text" name="clock" size="15" style="border:0px;float:right;">
+</form>
+
+</p>
+
+
+
 </body>
 </html>
