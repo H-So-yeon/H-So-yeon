@@ -1,5 +1,7 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head><title>contact</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
 h1{font-family:Arial Black;font-size:30px;color:white;}
 table{padding:8px;width:500px;height:20%;margin:auto;border-spacing: 8px;padding:1px}
@@ -8,24 +10,114 @@ td{background-color:#ffd42d;color:black;height:40px;}
 .button{color:yellow;background-color: transparent;height:35px}
 .image{background-color: transparent;}
 .text_area{background-color: transparent}
+
+@import url(https://fonts.googleapis.com/css?family=BenchNine:700);
+.snip1535 {
+  background-color: #06011E;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'BenchNine', Arial, sans-serif;
+  font-size: 1em;
+  font-size: 15px;
+  line-height: 1em;
+  margin: 15px 40px;
+  outline: none;
+  padding: 12px 40px 10px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.snip1535:before,
+.snip1535:after {
+  border-color: transparent;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  border-style: solid;
+  border-width: 0;
+  content: "";
+  height: 24px;
+  position: absolute;
+  width: 24px;
+}
+.snip1535:before {
+  border-color: #06011E;
+  border-right-width: 3px;
+  border-top-width: 3px;
+  right: -5px;
+  top: -5px;
+}
+.snip1535:after {
+  border-bottom-width: 3px;
+  border-color: #06011E;
+  border-left-width: 3px;
+  bottom: -5px;
+  left: -5px;
+}
+.snip1535:hover,
+.snip1535.hover {
+  background-color: #06011E;
+}
+.snip1535:hover:before,
+.snip1535.hover:before,
+.snip1535:hover:after,
+.snip1535.hover:after {
+  height: 100%;
+  width: 100%;
+}
+/* Demo purposes only */
+body {
+  background-color: #212121;
+  padding: 50px 0;
+  text-align: center;
+}
 </style>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function chkMailFrm() {
+ var f = document.formmail;
+ if (!f.senduser.value) {
+  alert("이름을 입력해주세요");
+  f.senduser.focus();
+  return false;
+ }
+ if (!f.phone.value) {
+  alert("전화번호을 입력해주세요");
+  f.phone.focus();
+  return false;
+ }
+ if (!f.email.value) {
+  alert("이메일을 입력해주세요");
+  f.email.focus();
+  return false;
+ }
+}
+//-->
+</SCRIPT>
 </head>
 <body style="overflow:hidden;background-color:#1442bc;text-align:center;">
-  <image src="./image/contact.png" style="width:40%;margin-top:13%">
+  <image src="./image/contact.png" style="width:40%;margin-top:10%">
+    <form name="formmail" method="get" action="data.php" onSubmit="return chkMailFrm()">
+    <a name=01></a>
     <table>
       <tr>
-        <td><input class=text_box type="text" name=name value="Your Name*" ></td>
+        <td><input class=text_box type="text" name=senduser value="Your Name*" ></td>
         <td><input class=text_box type="text" name=email value="Your E-mail*" size=20%></td>
       </tr>
       <tr>
-        <td colspan=2><input class=text_box type='text' name=ph value="Your Phone No." size=68.5%></td>
+        <td colspan=2><input class=text_box type='text' name=phone value="Your Phone No." size=68.5%></td>
       </tr>
       <tr>
-        <td colspan=2><textarea  class=text_area name=ask value="Ask me anything..." cols=70 row=800>Ask me anything...</textarea></td>
-      </tr>
-      <tr>
-        <td colspan=2 style="background-color: transparent"><input type="image"name=submit value="Get In Touch" src="./image/submit.png" width=510px></td>
+        <td colspan=2><textarea  class=text_area name=body value="Ask me anything..." cols=70 row=800>Ask me anything...</textarea></td>
       </tr>
     </table>
+
+
+    <button class="snip1535">
+      Get In Touch
+    </button>
+
+  </form>
 </body>
 </html>
