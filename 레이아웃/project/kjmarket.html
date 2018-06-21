@@ -1,6 +1,78 @@
 <html>
 <head><title>title</title>
 <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  display: table;
+  margin: 0;
+}
+
+.slider-container, .wrapper {
+  position: relative;
+  overflow: hidden;
+  max-width: 600px;
+  width: 100%;
+  height:450px;
+}
+
+.wrapper { margin: 150px auto; }
+
+.slider-container div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  z-index: 0;
+  text-align:center;
+
+}
+
+.slider-container div:first-child {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  z-index: 20;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+}
+
+.prev:hover, .next:hover { opacity: 1; }
+
+.prev { left: 15px; }
+
+.next {
+  right: 15px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+:focus { outline: none; }
+
+</style>
+</head>
+
 <style type="text/css">
 html, body {height:100%; margin:0; padding:0;}
 .box{width:100%;border:0;height:830px;}
@@ -23,10 +95,13 @@ html {
 }
 ::-webkit-scrollbar {
     width: 0px;
-    background: transparent;  /* optional: just make scrollbar invisible */
+    background: transparent;
 }
 
+
+
 </style>
+
 </head>
 <body style="overflow:auto;">
 <!--1번째 슬라이드-->
@@ -48,84 +123,170 @@ html {
     </div>
   </div>
 </div>
-<!--이미지 슬라이드-->
+<!--상세 설명-->
 <div class=box2 style="background-color:#202020;line-height:26px">
   <br>&nbsp;</br><br>&nbsp;</br>
   <span style="margin:auto;text-align:center;">
     <div class=exp >
       <b>우리나라의 역사와 함께한 전통시장 살리기<p>&nbsp;</p></b>
     </div>
-
   </span>
-  <div class="w3-content" style="max-width:800px;position:relative;margin:auto;">
-    <img class="mySlides" src="../image/0001.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0002.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0003.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0004.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0006.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0007.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0008.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0009.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0010.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0011.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0012.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0013.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0014.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0015.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0016.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0017.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0018.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0019.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0020.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0021.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0022.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0023.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0024.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0025.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0026.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0027.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0028.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0029.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0030.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0030.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0031.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0032.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0033.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0034.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0035.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0036.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0037.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0038.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0039.jpg" style="width:100%">
-    <img class="mySlides" src="../image/0040.jpg" style="width:100%">
-
-    <a class="w3-btn-floating" style="position:absolute;top:50%;left:-7%" onclick="plusDivs(-1)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#F2F2F2" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"/></g></svg></a>
-    <a class="w3-btn-floating" style="position:absolute;top:50%;right:-7%" onclick="plusDivs(1)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#F2F2F2" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"/></g></svg></a>
-
+<!--이미지 슬라이드-->
+  <div class="wrapper">
+    <div class="slider-container" >
+      <div><img  src="../image/0001.jpg" style="width:100%"></div>
+      <div><img  src="../image/0002.jpg" style="width:100%"></div>
+      <div><img  src="../image/0003.jpg" style="width:100%"></div>
+      <div><img  src="../image/0004.jpg" style="width:100%"></div>
+      <div><img  src="../image/0006.jpg" style="width:100%"></div>
+      <div><img  src="../image/0007.jpg" style="width:100%"></div>
+      <div><img  src="../image/0008.jpg" style="width:100%"></div>
+      <div><img  src="../image/0009.jpg" style="width:100%"></div>
+      <div><img  src="../image/0010.jpg" style="width:100%"></div>
+      <div><img  src="../image/0011.jpg" style="width:100%"></div>
+      <div><img  src="../image/0012.jpg" style="width:100%"></div>
+      <div><img  src="../image/0013.jpg" style="width:100%"></div>
+      <div><img  src="../image/0014.jpg" style="width:100%"></div>
+      <div><img  src="../image/0015.jpg" style="width:100%"></div>
+      <div><img  src="../image/0016.jpg" style="width:100%"></div>
+      <div><img  src="../image/0017.jpg" style="width:100%"></div>
+      <div><img  src="../image/0018.jpg" style="width:100%"></div>
+      <div><img  src="../image/0020.jpg" style="width:100%"></div>
+      <div><img  src="../image/0019.jpg" style="width:100%"></div>
+      <div><img  src="../image/0021.jpg" style="width:100%"></div>
+      <div><img  src="../image/0022.jpg" style="width:100%"></div>
+      <div><img  src="../image/0024.jpg" style="width:100%"></div>
+      <div><img  src="../image/0023.jpg" style="width:100%"></div>
+      <div><img  src="../image/0025.jpg" style="width:100%"></div>
+      <div><img  src="../image/0026.jpg" style="width:100%"></div>
+      <div><img  src="../image/0027.jpg" style="width:100%"></div>
+      <div><img  src="../image/0028.jpg" style="width:100%"></div>
+      <div><img  src="../image/0029.jpg" style="width:100%"></div>
+      <div><img  src="../image/0030.jpg" style="width:100%"></div>
+      <div><img  src="../image/0030.jpg" style="width:100%"></div>
+      <div><img  src="../image/0031.jpg" style="width:100%"></div>
+      <div><img  src="../image/0032.jpg" style="width:100%"></div>
+      <div><img  src="../image/0033.jpg" style="width:100%"></div>
+      <div><img  src="../image/0034.jpg" style="width:100%"></div>
+      <div><img  src="../image/0035.jpg" style="width:100%"></div>
+      <div><img  src="../image/0036.jpg" style="width:100%"></div>
+      <div><img  src="../image/0037.jpg" style="width:100%"></div>
+      <div><img  src="../image/0038.jpg" style="width:100%"></div>
+      <div><img  src="../image/0039.jpg" style="width:100%"></div>
+      <div><img  src="../image/0040.jpg" style="width:100%"></div>
+    </div>
+    <div class="prev"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 612 612">
+      <g>
+        <path fill="#6E6E6E" d="M421.133,267.75H287.965l0.803-4.973l42.61-43.012c13.426-13.56,16.696-35.267,5.604-50.796
+        c-14.096-19.718-41.482-21.343-57.796-4.877L164.131,280.258C156.997,287.43,153,297.164,153,307.358
+        c0,10.175,3.997,19.908,11.112,27.101l114.75,113.469c14.822,14.976,38.842,14.976,53.666,0
+        c14.841-14.975,14.841-39.226,0-54.182L282.17,344.25h138.962c20.923,0,37.867-16.944,37.867-37.868v-0.765
+        C459,284.714,442.036,267.75,421.133,267.75z M306,0C136.992,0,0,136.992,0,306s136.992,306,306,306s306-136.992,306-306
+        S475.008,0,306,0z M306,535.5C179.45,535.5,76.5,432.55,76.5,306S179.45,76.5,306,76.5S535.5,179.45,535.5,306
+        S432.55,535.5,306,535.5z"/>
+      </g>
+      </svg></div>
+    <div class="next"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 612 612">
+      <g>
+        <path fill="#6E6E6E" d="M421.133,267.75H287.965l0.803-4.973l42.61-43.012c13.426-13.56,16.696-35.267,5.604-50.796
+        c-14.096-19.718-41.482-21.343-57.796-4.877L164.131,280.258C156.997,287.43,153,297.164,153,307.358
+        c0,10.175,3.997,19.908,11.112,27.101l114.75,113.469c14.822,14.976,38.842,14.976,53.666,0
+        c14.841-14.975,14.841-39.226,0-54.182L282.17,344.25h138.962c20.923,0,37.867-16.944,37.867-37.868v-0.765
+        C459,284.714,442.036,267.75,421.133,267.75z M306,0C136.992,0,0,136.992,0,306s136.992,306,306,306s306-136.992,306-306
+        S475.008,0,306,0z M306,535.5C179.45,535.5,76.5,432.55,76.5,306S179.45,76.5,306,76.5S535.5,179.45,535.5,306
+        S432.55,535.5,306,535.5z"/>
+      </g>
+      </svg></div>
   </div>
-
+  <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
   <script>
-  var slideIndex = 1;
-  showDivs(slideIndex);
+  var toIndex = 0,
+    fromIndex = 0,
+    items = $('.slider-container div'),
+    itemAmt = items.length - 1;
 
-  function plusDivs(n) {
-    showDivs(slideIndex += n);
-  }
+  function toNext() {
 
-  function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length} ;
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
+    var item = items.eq(toIndex);
+    item.css({
+      'transition': 'transform 0.4s ease',
+      'transform': 'translateX(0%)',
+      'z-index': '1'
+    });
+
+    if (toIndex == 0) {
+      fromIndex = itemAmt;
+    } else {
+      fromIndex = toIndex - 1;
     }
-    x[slideIndex-1].style.display = "block";
+
+    var fromItem = items.eq(fromIndex);
+    fromItem.css({
+      'transition': 'transform 0.4s ease',
+      'transform': 'translateX(-100%)',
+      'z-index': '-1'
+    });
+
   }
+
+  function toPrev() {
+    if (toIndex == itemAmt) {
+      fromIndex = 0;
+    } else {
+      fromIndex = toIndex + 1;
+    }
+
+    var fromItem = items.eq(fromIndex);
+    fromItem.css({
+      'transition': 'transform 0.4s ease',
+      'transform': 'translateX(-100%)',
+      'z-index': '-1'
+    });
+
+    var item = items.eq(toIndex);
+    item.css({
+      'transition': 'transform 0.4s ease',
+      'transform': 'translateX(0%)',
+      'z-index': '1'
+    });
+  }
+
+  var autoSlide = setInterval(function() {
+    toIndex += 1;
+    if (toIndex > itemAmt) {
+      toIndex = 0;
+    }
+    toNext();
+  }, 3000);
+
+  function nextClick() {
+    clearInterval(autoSlide);
+    toIndex += 1;
+    if (toIndex > itemAmt) {
+      toIndex = 0;
+    }
+    toNext();
+  }
+
+  function prevClick() {
+    clearInterval(autoSlide);
+    toIndex -= 1;
+    if (toIndex < 0) {
+      toIndex = itemAmt;
+    }
+    toPrev();
+  }
+
+  $('.next').click(nextClick);
+
+  $('.prev').click(prevClick);
+
+  $('.slider-container div').on('swiperight', nextClick);
+  $('.slider-container div').on('swipeleft', prevClick);
   </script>
 
   <!--2번째 슬라이드-->
-  <div style="padding:3%;">
+  <div style="padding:3%;background-color:#202020;margin-top:0;">
   <b>팀</b><br>
   <div class=exp>
     팀으로 해당 프로젝트를 진행하였다.<br>
@@ -146,7 +307,7 @@ html {
     <a href="https://ovenapp.io/view/k5U8zsUiqwYOaMdjhaPno5XF8OBzzAfG/xlySG" target="_blank">카카오 오븐으로 보기</a></p>
   </div>
   <p>&nbsp;</p><p>&nbsp;</p>
-  
+
   <!--2번째 이미지 슬라이드-->
   <div class="w3-content" style="max-width:350px;position:relative;margin:auto;">
     <img class="kj" src="../image/kj/kj-1.png" style="width:100%">
